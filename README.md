@@ -2,7 +2,7 @@
 
 An interactive 2D Snake game developed in **Java (Swing/AWT)** featuring customizable difficulty levels, pause/resume controls, persistent score tracking, and an autonomous **AI Autopilot** powered by pathfinding algorithms.
 
-Developed as an academic MCA portfolio project demonstrating core Java, Object-Oriented Programming (OOP), Data Structures & Algorithms, and GUI Event Handling.
+Developed as an portfolio project demonstrating core Java, Object-Oriented Programming (OOP), Data Structures & Algorithms, and GUI Event Handling.
 
 ---
 
@@ -60,40 +60,6 @@ This project implements the classic arcade Snake game with modern enhancements:
 
 ---
 
-## 📁 Project Structure
-
-```
-snake-game/
-├── files/                           # Game assets & high-score storage
-│   ├── apple.png, goldenapple.png   # Sprites
-│   └── bestScore.txt                # Local score record
-├── src/
-│   ├── main/java/com/snakegame/
-│   │   ├── Game.java                # Main entry point (starts Swing EDT)
-│   │   ├── ai/
-│   │   │   └── SnakeAI.java         # AI Autopilot pathfinding agent
-│   │   └── core/
-│   │       ├── Snake.java           # Snake entity (segment queue & growth)
-│   │       ├── GameObj.java         # Abstract base class for 2D objects
-│   │       ├── Food.java            # Strategy interface for consumables
-│   │       ├── Apple.java           # Red apple item (+10 pts)
-│   │       ├── GoldenApple.java     # Golden bonus item (+30 pts)
-│   │       ├── Direction.java       # Cardinal movement enumeration
-│   │       ├── Difficulty.java      # Speed presets enum (EASY, MEDIUM, HARD)
-│   │       ├── FileLineIterator.java# Custom iterator for file streaming
-│   │       ├── SnakeGameBoard.java  # Main game canvas & loop timer
-│   │       └── RunSnake.java        # Top JFrame container & toolbar
-│   └── test/java/com/snakegame/
-│       ├── SnakeTest.java           # Core mechanics & physics tests
-│       └── SnakeAITest.java         # AI navigation & safety tests
-├── .gitignore                       # Clean Git exclusions
-├── pom.xml                          # Maven build & dependency configuration
-├── run.bat                          # 1-click Windows launch script
-├── run.ps1                          # PowerShell launch script
-└── README.md                        # Documentation
-```
-
----
 
 ## 🎮 Game Controls
 
@@ -108,55 +74,3 @@ snake-game/
 
 ---
 
-## 🚀 How to Run
-
-### Option 1: Quick Launch (Windows)
-Double-click `run.bat` or run in PowerShell:
-```powershell
-.\run.ps1
-```
-
-### Option 2: Maven CLI
-```bash
-mvn compile exec:java
-```
-
-### Option 3: VS Code / IntelliJ IDEA
-* Open the `snake-main` folder in your IDE.
-* Run `src/main/java/com/snakegame/Game.java`.
-
----
-
-## 🧪 Automated Testing
-
-Automated tests written in **JUnit 5** verify game integrity:
-```bash
-mvn test
-```
-
-Test coverage includes:
-- Snake movement, queue advancement, and segment growth.
-- Wall collision and boundary limits.
-- Body collision detection.
-- Difficulty delay transitions.
-- Pause/resume state locking.
-- AI pathfinding accuracy and obstacle avoidance.
-
----
-
-## 📸 Screenshots
-
-*(Place gameplay screenshots here before uploading to GitHub)*
-
----
-
-## 🔮 Future Improvements
-
-- [ ] Add sound effects for eating fruit and game over.
-- [ ] Implement a two-player local mode (Player vs. Player or Player vs. AI).
-- [ ] Add skin/theme customizer for snake and canvas colors.
-
----
-
-## 📄 License
-Academic Mini-Project — Developed for study and portfolio demonstration.
